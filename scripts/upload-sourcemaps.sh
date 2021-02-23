@@ -1,7 +1,7 @@
 # Assumes you're in a git repository
 export ORG=metastartup
 export PROJECT=sentry-demo
-export VERSION=0.0.2
+export VERSION=0.0.3
 
 npm run build:prod
 
