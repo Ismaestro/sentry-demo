@@ -1,7 +1,10 @@
-# Assumes you're in a git repository
-export ORG=metastartup
-export PROJECT=sentry-demo
-export VERSION=0.0.3
+VERSION=$(cat ./package.json \
+  | grep version \
+  | head -1 \
+  | awk -F: '{ print $2 }' \
+  | sed 's/[",]//g')
+ORG=metastartup
+PROJECT=sentry-demo
 
 npm run build:prod
 
