@@ -3,6 +3,8 @@ export ORG=metastartup
 export PROJECT=sentry-demo
 export VERSION=0.0.2
 
+npm run build:prod
+
 sentry-cli releases --org "$ORG" new --project "$PROJECT" "$VERSION"
 
 sentry-cli releases --org "$ORG" --project "$PROJECT" set-commits --auto "$VERSION"
