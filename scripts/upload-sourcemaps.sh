@@ -1,7 +1,7 @@
 # Assumes you're in a git repository
 export ORG=metastartup
 export PROJECT=sentry-demo
-export VERSION=0.0.1
+export VERSION=0.0.2
 
 sentry-cli releases --org "$ORG" new --project "$PROJECT" "$VERSION"
 
