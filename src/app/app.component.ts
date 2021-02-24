@@ -7,7 +7,7 @@ import * as Sentry from "@sentry/angular";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-dream-app';
+  title = 'sentry-demo';
 
   constructor() {
     Sentry.configureScope(scope => {

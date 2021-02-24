@@ -4,8 +4,9 @@ VERSION=$(cat ./package.json \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g' \
   | xargs)
-ORG=metastartup
-PROJECT=sentry-demo
+
+export SENTRY_ORG=metastartup
+export SENTRY_PROJECT=sentry-demo
 
 npm run build:prod
 

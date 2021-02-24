@@ -3,7 +3,7 @@
 
 module.exports = function (config) {
   config.set({
-    basePath: 'my-dream-app',
+    basePath: 'sentry-demo',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),
@@ -16,7 +16,7 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/my-dream-app'),
+      dir: require('path').join(__dirname, './coverage/sentry-demo'),
       subdir: '.',
       reporters: [
         { type: 'html' },
