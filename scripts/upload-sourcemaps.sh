@@ -13,8 +13,8 @@ export SENTRY_PROJECT=sentry-demo
 
 sentry-cli releases new "$SENTRY_PROJECT@$VERSION"
 
-sentry-cli releases set-commits --auto "$VERSION"
+sentry-cli releases set-commits --auto "$SENTRY_PROJECT@$VERSION"
 
-sentry-cli releases files "$VERSION" upload-sourcemaps ./dist/"$PROJECT"/ --strip-common-prefix
+sentry-cli releases files "$SENTRY_PROJECT@$VERSION" upload-sourcemaps ./dist/"$PROJECT"/ --strip-common-prefix
 
 sentry-cli releases finalize "$SENTRY_PROJECT@$VERSION"
