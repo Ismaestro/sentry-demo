@@ -11,7 +11,7 @@ export SENTRY_PROJECT=sentry-demo
 
 #npm run build:prod
 
-sentry-cli releases new "$VERSION"
+sentry-cli releases new $SENTRY_PROJECT-"$VERSION"
 
 sentry-cli releases set-commits --auto "$VERSION"
 
