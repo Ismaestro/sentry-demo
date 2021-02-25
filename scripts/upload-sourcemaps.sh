@@ -9,7 +9,7 @@ REPOSITORY_URL=git@github.com:Ismaestro/sentry-demo.git
 export SENTRY_ORG=metastartup
 export SENTRY_PROJECT=sentry-demo
 
-#npm run build:prod
+npm run build:prod
 
 sentry-cli releases new "$SENTRY_PROJECT@$VERSION"
 
