@@ -14,10 +14,9 @@ npm run build:prod
 
 sentry-cli releases new "$VERSION"
 
-git remote add origin $REPOSITORY_URL
-
 sentry-cli releases set-commits --auto "$VERSION"
 
-sentry-cli releases files "$VERSION" upload-sourcemaps ./dist/"$PROJECT"/ --rewrite --strip-common-prefix
+sentry-cli releases files "$VERSION" upload-sourcemaps ./dist/"$PROJECT"/ \
+    --url-prefix "~/$SENTRY_PROJECT" --strip-common-prefix
 
 sentry-cli releases finalize "$VERSION"
