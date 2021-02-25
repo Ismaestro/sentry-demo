@@ -10,7 +10,7 @@ export SENTRY_ORG=metastartup
 export SENTRY_PROJECT=sentry-demo
 export SENTRY_LOG_LEVEL=
 
-#npm run build:prod
+npm run build:prod
 
 sentry-cli releases new "$VERSION"
 
