@@ -4,13 +4,17 @@ VERSION=$(cat ./package.json \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g' \
   | xargs)
+REPOSITORY_URL=git@github.com:Ismaestro/sentry-demo.git
 
 export SENTRY_ORG=metastartup
 export SENTRY_PROJECT=sentry-demo
+export SENTRY_LOG_LEVEL=
 
 #npm run build:prod
 
 sentry-cli releases new "$VERSION"
+
+git remote add origin $REPOSITORY_URL
 
 sentry-cli releases set-commits --auto "$VERSION"
 
