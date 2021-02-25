@@ -11,10 +11,10 @@ export SENTRY_PROJECT=sentry-demo
 
 #npm run build:prod
 
-sentry-cli releases new $SENTRY_PROJECT-"$VERSION"
+sentry-cli releases new "$SENTRY_PROJECT-$VERSION"
 
 sentry-cli releases set-commits --auto "$VERSION"
 
 sentry-cli releases files "$VERSION" upload-sourcemaps ./dist/"$PROJECT"/ --strip-common-prefix
 
-sentry-cli releases finalize "$VERSION"
+sentry-cli releases finalize "$SENTRY_PROJECT-$VERSION"
