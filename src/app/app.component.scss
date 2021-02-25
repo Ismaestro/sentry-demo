@@ -280,6 +280,14 @@ svg#clouds {
   }
 }
 
+.demo__container--row {
+  display: block;
+}
+
+.pokemon-error {
+  width: 25%;
+}
+
 @media screen and (max-width: 575px) {
   svg#rocket-smoke {
     display: none;

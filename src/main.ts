@@ -12,7 +12,7 @@ Sentry.init({
   release: 'sentry-demo@' + version,
   integrations: [
     new Integrations.BrowserTracing({
-      tracingOrigins: ["localhost", "https://domain.com/api"],
+      tracingOrigins: ["localhost", "https://pokeapi.co"],
       routingInstrumentation: Sentry.routingInstrumentation,
     }),
   ],

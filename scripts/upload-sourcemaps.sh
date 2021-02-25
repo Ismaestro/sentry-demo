@@ -8,12 +8,12 @@ VERSION=$(cat ./package.json \
 export SENTRY_ORG=metastartup
 export SENTRY_PROJECT=sentry-demo
 
-npm run build:prod
+#npm run build:prod
 
-sentry-cli releases --org "$ORG" new --project "$PROJECT" "$VERSION"
+sentry-cli releases new "$VERSION"
 
-sentry-cli releases --org "$ORG" --project "$PROJECT" set-commits --auto "$VERSION"
+sentry-cli releases set-commits --auto "$VERSION"
 
-sentry-cli releases --org "$ORG" --project "$PROJECT" files "$VERSION" upload-sourcemaps ./dist/"$PROJECT"/ --rewrite --strip-common-prefix
+sentry-cli releases files "$VERSION" upload-sourcemaps ./dist/"$PROJECT"/ --rewrite --strip-common-prefix
 
-sentry-cli releases --org "$ORG" --project "$PROJECT" finalize "$VERSION"
+sentry-cli releases finalize "$VERSION"
